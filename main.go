@@ -8,7 +8,7 @@ import (
 	"log"
 	"net/http"
 	"text/template"
-"github.com/julienschmidt/httprouter"
+
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -97,9 +97,7 @@ func SigninHandler(w http.ResponseWriter, r *http.Request) {
 		if !found {
 			defer http.Redirect(w, r, "/signinpage", http.StatusFound)
 		}
-		if found {
-			jwtToken, err := person.GetJwtToken()
-		}
+
 	}
 }
 
