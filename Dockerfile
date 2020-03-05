@@ -1,6 +1,8 @@
 FROM golang:1.13
 
-WORKDIR /usr/src
+RUN mkdir -p $GOPATH/src/app
+WORKDIR /$GOPATH/src/app
+
 COPY . .
 
 RUN go get -d -v ./...
